@@ -1,4 +1,0 @@
-uint8 numOfCorners
-float32 sideLength
----
-float32 perimeterLength
