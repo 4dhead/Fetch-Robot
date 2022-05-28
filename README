@@ -1,0 +1,31 @@
+--------READ ME FILE FOR BENJAMIN DUNN ROBOTICS ASSIGNMENT--------
+
+Aurthor: Benjamin Dunn (bed45)
+Purpose: ROS designed fetch robot program to search an enviroment for blue items, pick them up and return them to a red bin.
+Completed: 23/12/2021
+
+I. File list
+----------------
+Along with the screencast MP4 file there is my bed45_ros360 file as requested.
+
+The files to be concerend with are:
+
+-assignmentRoom.launch
+    This is the launch file that will load rviz and gazebo with the appropriate assignment settings
+
+-image_proc.launch
+    This launch file defines the differntly colored items we will be looking for, namely red and blue objects
+
+-assignmentCode.py
+    This python script will move the robot between blue objcets and red objects. It will correctly move between states when items are found are within x distance. Object avoidance and setting armstate at begining (so it is above the robot and out of the way) have been commented out as they cause issues with finding objects for some reason.
+
+All additional files are practical or test programs I created during the semester.
+
+II. Build
+----------------
+Leave all files where they currently are, they do not need to be moved.
+
+Simply open command line and:
+    -Terminal 1: roscore
+    -Terminal 2: roslaunch bed45_360 assignmentRoom.launch (allow a brief amount of time for different programs to load)
+    -Terminal 3: rosrun bed45_360 assignmentCode.py
